@@ -7,8 +7,7 @@ def main():
     window.title('Lab 7')
     window.geometry('295x70')
     window.resizable(False,False)
-
-
+    
     widgets = GUI(window)
 
     window.mainloop()
