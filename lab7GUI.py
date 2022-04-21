@@ -34,27 +34,81 @@ class GUI:
     def click(self):
         self.pick = self.whichFunc.get()
         if(self.pick == 1):
-            funcOne = Toplevel()
-            funcOne.title('Func One')
-            funcOne.geometry('240x70')
-            outline = Frame(funcOne, highlightbackground='red', highlightthickness=2)
-            outline.grid(rowspan=5, columnspan=5, padx=3, pady=3)
-            self.funcLabel = Label(outline, text='Enter an Int: ')
-            self.funcLabel.grid(row=0, column=0, columnspan=2)
-            self.funcEntry = Entry(outline, width=6)
-            self.funcEntry.grid(row=0, column=2, columnspan=3)
-            self.funcExecButton = Button(outline, text='Go', width=2, command=self.execFunc)
-            self.funcExecButton.grid(row=0,column=5, padx=2)
-            self.outLabel = Label(outline)
-            self.outLabel.grid(row=3, column=3, columnspan=5)
+            self.createFuncOneWin()
             
+        if(self.pick == 2):
+            self.createFuncTwoWin()
+
+        if(self.pick == 3):
+            self.createFuncThreeWin()
+
+    def createFuncOneWin(self):
+        funcOne = Toplevel()
+        funcOne.title('Func One')
+        funcOne.geometry('240x70')
+        outline = Frame(funcOne, highlightbackground='red', highlightthickness=2)
+        outline.grid(rowspan=5, columnspan=5, padx=3, pady=3)
+        self.funcLabel = Label(outline, text='Enter an Int: ')
+        self.funcLabel.grid(row=0, column=0, columnspan=2)
+        self.funcEntry1 = Entry(outline, width=6)
+        self.funcEntry1.grid(row=0, column=2, columnspan=3)
+        self.funcExecButton = Button(outline, text='Go', width=2, command=self.execFunc)
+        self.funcExecButton.grid(row=0,column=5, padx=2)
+        self.outLabel = Label(outline)
+        self.outLabel.grid(row=3, column=3, columnspan=10)
+
+    def createFuncTwoWin(self):
+        funcTwo = Toplevel()
+        funcTwo.title('Func Two')
+        funcTwo.geometry('260x100')
+        outline = Frame(funcTwo, highlightbackground='red', highlightthickness=2)
+        outline.grid(rowspan=5, columnspan=5, padx=3, pady=3)
+        self.funcLabel1 = Label(outline, text='Enter Int for Base: ')
+        self.funcLabel1.grid(row=0, column=0, columnspan=2)
+        self.funcLabel1 = Label(outline, text='Enter Int for Power: ')
+        self.funcLabel1.grid(row=1, column=0, columnspan=2)
+        self.funcEntry1 = Entry(outline, width=6)
+        self.funcEntry1.grid(row=0, column=2, columnspan=3)
+        self.funcEntry2 = Entry(outline, width=6)
+        self.funcEntry2.grid(row=1, column=2, columnspan=3)
+        self.funcExecButton = Button(outline, text='Go', width=2, command=self.execFunc)
+        self.funcExecButton.grid(row=0,column=5, padx=2)
+        self.outLabel = Label(outline)
+        self.outLabel.grid(row=3, column=3, columnspan=5)
+
+    def createFuncThreeWin(self):
+        funcOne = Toplevel()
+        funcOne.title('Func Three')
+        funcOne.geometry('240x70')
+        outline = Frame(funcOne, highlightbackground='red', highlightthickness=2)
+        outline.grid(rowspan=5, columnspan=5, padx=3, pady=3)
+        self.funcLabel = Label(outline, text='Enter an Int: ')
+        self.funcLabel.grid(row=0, column=0, columnspan=2)
+        self.funcEntry1 = Entry(outline, width=6)
+        self.funcEntry1.grid(row=0, column=2, columnspan=3)
+        self.funcExecButton = Button(outline, text='Go', width=2, command=self.execFunc)
+        self.funcExecButton.grid(row=0,column=5, padx=2)
+        self.outLabel = Label(outline)
+        self.outLabel.grid(row=3, column=3, columnspan=5)
+
 
 
     def execFunc(self):
-        num = int(self.funcEntry.get())
-        self.funcEntry.delete(0,END)
         if(self.pick == 1):
+            num = int(self.funcEntry1.get())
+            self.funcEntry1.delete(0,END)
             self.outLabel.config(text = f'{one(num)}')
+        if(self.pick == 2):
+            num1 = int(self.funcEntry1.get())
+            num2 = int(self.funcEntry2.get())
+            self.funcEntry1.delete(0, END)
+            self.funcEntry2.delete(0, END)
+            self.outLabel.config(text = f'{two(num1, num2)}')
+        if(self.pick == 3):
+            num = int(self.funcEntry1.get())
+            self.funcEntry1.delete(0, END)
+            self.outLabel.config(text = f'{three(num)}')
+
 
 
 
