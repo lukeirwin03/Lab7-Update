@@ -59,7 +59,7 @@ def check(*args):
     :param args: allows this function to be called with varying numbers of parameters
     '''
     for i in args:
-        if((type(i) != int)):
+        if((type(int(i)) != int)):
             raise TypeError('Please enter an Integer')
 
 if __name__ == '__main__':
