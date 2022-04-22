@@ -94,16 +94,19 @@ class GUI:
         TODO: Implement the check method to account for the user inputting a non-int type
         '''
         if(self.pick == 1):
+            check(self.funcEntry1.get())
             num = int(self.funcEntry1.get())
             self.funcEntry1.delete(0,END)
             self.outLabel.config(text = f'{one(num)}')
         if(self.pick == 2):
+            check(self.funcEntry1.get(),self.funcEntry2.get())
             num1 = int(self.funcEntry1.get())
             num2 = int(self.funcEntry2.get())
             self.funcEntry1.delete(0, END)
             self.funcEntry2.delete(0, END)
             self.outLabel.config(text = f'{two(num1, num2)}')
         if(self.pick == 3):
+            check(self.funcEntry1.get())
             num = int(self.funcEntry1.get())
             self.funcEntry1.delete(0, END)
             self.outLabel.config(text = f'{three(num)}')
