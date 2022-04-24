@@ -16,6 +16,8 @@ def two(num, pow):
     :param pow: the value of the exponent that num is being raised to
     '''
     check(num, pow)
+    if(pow == 0):
+        return 1
     if(pow == 1):
         return num
     else: 
@@ -59,8 +61,12 @@ def check(*args):
     :param args: allows this function to be called with varying numbers of parameters
     '''
     for i in args:
-        if((type(int(i)) != int)):
+        i = str(i)
+        if((i.isnumeric() == False)):
             raise TypeError('Please enter an Integer')
+
+        '''if((type(i) != int)):
+            raise TypeError('Please enter an Integer')'''
 
 if __name__ == '__main__':
     main()
