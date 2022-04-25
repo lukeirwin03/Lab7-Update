@@ -39,7 +39,7 @@ def main():
     '''
     Function to call and run the program's functions
     '''
-    print(one(1))       # 1s
+    print(one(1))       # 1
     print(one(2))       # 3
     print(one(3))       # 6
     print(one(4))       # 10
