@@ -1,7 +1,7 @@
 import unittest
 from LukeIrwin7_1 import *
 
-class TestLab6(unittest.TestCase):
+class TestLab7(unittest.TestCase):
 
     def test_one(self):
         '''
