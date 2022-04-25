@@ -39,7 +39,7 @@ def main():
     '''
     Function to call and run the program's functions
     '''
-    print(one(1))       # 1
+    print(one(1))       # 1s
     print(one(2))       # 3
     print(one(3))       # 6
     print(one(4))       # 10
@@ -65,8 +65,6 @@ def check(*args):
         if((i.isnumeric() == False)):
             raise TypeError('Please enter an Integer')
 
-        '''if((type(i) != int)):
-            raise TypeError('Please enter an Integer')'''
 
 if __name__ == '__main__':
     main()
