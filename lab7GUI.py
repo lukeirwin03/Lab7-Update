@@ -42,7 +42,7 @@ class GUI:
 
     def createFuncOneWin(self):
         funcOne = Toplevel()
-        funcOne.title('Func One')
+        funcOne.title('Func One - Sum of Nums from 1')
         funcOne.geometry('240x70')
         outline = Frame(funcOne, highlightbackground='red', highlightthickness=2)
         outline.grid(rowspan=5, columnspan=5, padx=3, pady=3)
@@ -57,7 +57,7 @@ class GUI:
 
     def createFuncTwoWin(self):
         funcTwo = Toplevel()
-        funcTwo.title('Func Two')
+        funcTwo.title('Func Two - Base to the Power')
         funcTwo.geometry('260x100')
         outline = Frame(funcTwo, highlightbackground='red', highlightthickness=2)
         outline.grid(rowspan=5, columnspan=5, padx=3, pady=3)
@@ -76,7 +76,7 @@ class GUI:
 
     def createFuncThreeWin(self):
         funcOne = Toplevel()
-        funcOne.title('Func Three')
+        funcOne.title('Func Three - Print Nums')
         funcOne.geometry('240x70')
         outline = Frame(funcOne, highlightbackground='red', highlightthickness=2)
         outline.grid(rowspan=5, columnspan=5, padx=3, pady=3)
