@@ -92,9 +92,6 @@ class GUI:
         self.outLabel.grid(row=3, column=3, columnspan=5)
 
     def execFunc(self):
-        '''
-        TODO: Implement the check method to account for the user inputting a non-int type
-        '''
         if(self.pick == 1):
             self.outLabel.config(text = 'Error: Enter an Int')
             num = (self.funcEntry1.get()).strip()
