@@ -42,8 +42,9 @@ class GUI:
 
     def createFuncOneWin(self):
         funcOne = Toplevel()
-        funcOne.title('Func One - Sum of Nums from 1')
+        funcOne.title('Sum of Nums from 1')
         funcOne.geometry('240x70')
+        funcOne.resizable(True, False)
         outline = Frame(funcOne, highlightbackground='red', highlightthickness=2)
         outline.grid(rowspan=5, columnspan=5, padx=3, pady=3)
         self.funcLabel = Label(outline, text='Enter an Int: ')
@@ -57,8 +58,9 @@ class GUI:
 
     def createFuncTwoWin(self):
         funcTwo = Toplevel()
-        funcTwo.title('Func Two - Base to the Power')
+        funcTwo.title('Base to the Power')
         funcTwo.geometry('260x100')
+        funcTwo.resizable(True, False)
         outline = Frame(funcTwo, highlightbackground='red', highlightthickness=2)
         outline.grid(rowspan=5, columnspan=5, padx=3, pady=3)
         self.funcLabel1 = Label(outline, text='Enter Int for Base: ')
@@ -76,7 +78,7 @@ class GUI:
 
     def createFuncThreeWin(self):
         funcOne = Toplevel()
-        funcOne.title('Func Three - Print Nums')
+        funcOne.title('Print Nums')
         funcOne.geometry('240x70')
         outline = Frame(funcOne, highlightbackground='red', highlightthickness=2)
         outline.grid(rowspan=5, columnspan=5, padx=3, pady=3)
